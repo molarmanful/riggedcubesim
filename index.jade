@@ -1,0 +1,27 @@
+doctype html
+html
+	head
+		title riggedcubesim
+		link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css',rel='stylesheet')
+		link(href='main.css',rel='stylesheet')
+	body
+		nav.navbar-default.navbar-fixed-bottom
+			.container-fluid
+				.navbar-header
+					.navbar-brand riggedcubesim
+				p.navbar-text The pruning tables have turned!
+				p.navbar-text: .time
+		g-cube
+			g-speed 10
+		.modal.fade:.modal-dialog:.modal-content
+			.modal-header
+				h1 Congrats!
+			.modal-body
+				p You just solved the cube in <span class="time"></span> seconds!
+			.modal-footer
+			button.btn.btn-primary(data-dismiss='modal') Close
+			button.btn.btn-primary.playagain(data-dismiss='modal') Play again!
+		script(src='http://code.jquery.com/jquery-2.1.4.min.js')
+		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
+		script(src='https://molarmanful.github.io/gCube/gcube.min.js')
+		script(src='main.js')
