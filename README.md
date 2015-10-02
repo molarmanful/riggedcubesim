@@ -1,2 +1,2 @@
 # riggedcubesim
-The pruning tables have turned!
+Good luck solving this Rubik's Cube.
