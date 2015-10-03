@@ -9,15 +9,14 @@ $(function () {
 });
 
 function start() {
-	var started = false,
-		timer, move;
+	var started = false;
 	cube.addEventListener('onShuffleComplete', function () {
 		cube.addEventListener('onTwistComplete', function () {
 			if (!started) {
 				started = true;
 				cube.removeEventListener('onTwistComplete');
 				var startingtime = new Date();
-				timer = setInterval(function () {
+				var timer = setInterval(function () {
 					$('.time').text((new Date - startingtime) / 1000);
 					if (cube.isSolved()) {
 						clearInterval(timer);
@@ -44,7 +43,7 @@ function start() {
 							cube.twist(twist);
 						}
 					}
-				});
+				}, 1);
 			}
 		});
 	});
